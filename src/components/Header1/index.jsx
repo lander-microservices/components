@@ -1,7 +1,8 @@
 import React from "react";
-import PHONE_IMAGE from "./phone.svg"
+import PHONE_IMAGE from "./phone.svg";
+import "./index.scss"
 
-export default function Header({ number, eventID, headerTitle,  }) {
+export default function Header({ number, eventID, headerTitle }) {
   const handleCallEventClick = () =>
     window.fbcFunc("track", "Contact", {
       eventID: eventID,
