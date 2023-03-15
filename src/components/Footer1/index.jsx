@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
-import "./index.scss"
+import "./index.scss";
 
 export default function Footer({
   privacyPolicyRoute,
   termsAndConditionsRoute,
   partnerListRoute,
   eventID,
-  footerTitle, 
-  fullName
+  footerTitle,
+  fullName,
 }) {
   return (
     <>
@@ -15,11 +15,11 @@ export default function Footer({
         <div className="container">
           <div className="row">
             <small>
-              {footerTitle} is not an insurance or
-              operating company but connects individuals with insurance
-              providers and other affiliates. Plans are insured or covered by a
-              Medicare Advantage organization with a Medicare contract and/or a
-              Medicare-approved Part D sponsor.
+              {footerTitle} is not an insurance or operating company but
+              connects individuals with insurance providers and other
+              affiliates. Plans are insured or covered by a Medicare Advantage
+              organization with a Medicare contract and/or a Medicare-approved
+              Part D sponsor.
             </small>
             <small>
               Enrollment in the plan depends on the plan’s contract renewal with
@@ -29,12 +29,12 @@ export default function Footer({
             </small>
             <small>
               Descriptions are for informational purposes only and subject to
-              change. {footerTitle} is not affiliated with
-              any insurance plan nor does it represent or endorse any plan. We
-              do not offer every plan available in your area. Any information we
-              provide is limited to those plans we do offer in your area. Please
-              contact Medicare.gov or 1–800 MEDICARE to get information on all
-              of your options.
+              change. {footerTitle} is not affiliated with any insurance plan
+              nor does it represent or endorse any plan. We do not offer every
+              plan available in your area. Any information we provide is limited
+              to those plans we do offer in your area. Please contact
+              Medicare.gov or 1–800 MEDICARE to get information on all of your
+              options.
             </small>
             <small>
               By using this site, you acknowledge that you have read and agree
@@ -56,7 +56,12 @@ export default function Footer({
             </small>
             <ul className="menu">
               <li>
-                <a target={"_blank"} rel="noreferrer" href={privacyPolicyRoute}>
+                <a
+                  target={"_blank"}
+                  rel="noreferrer"
+                  href={privacyPolicyRoute}
+                  className="privacypolicy"
+                >
                   Privacy Policy /
                 </a>
               </li>
@@ -65,6 +70,7 @@ export default function Footer({
                   target={"_blank"}
                   rel="noreferrer"
                   href={termsAndConditionsRoute}
+                  className="privacypolicy"
                 >
                   Terms of Service /
                 </a>
