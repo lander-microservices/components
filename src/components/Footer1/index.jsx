@@ -11,72 +11,57 @@ export default function Footer({
 }) {
   return (
     <>
-      <footer>
+      <footer className="footer">
         <div className="container">
           <div className="row">
+            <div class="logoholder">
+              <div class="logo">
+                <img src="/assets/images/logo.png" alt="logo" />
+                <div class="sitename">
+                  <h1>Health-benefits.co</h1>
+                  <h2>a non-government aca site</h2>
+                </div>
+              </div>
+              <hr className="horizontal" />
+            </div>
             <small>
-              {footerTitle} is not an insurance or operating company but
-              connects individuals with insurance providers and other
-              affiliates. Plans are insured or covered by a Medicare Advantage
-              organization with a Medicare contract and/or a Medicare-approved
-              Part D sponsor.
+              Disclaimer: Health-benefits.co is a referral source that provides
+              information and access to a helpline to match consumers with
+              companies that may provide certain insurance coverage to them.
+              qualifyaca.com does not act as an insurance broker and does not
+              make decisions about insurance coverage that may be available to
+              you. qualifyaca.com doesn’t promise a specific outcome or the
+              results you may achieve by calling the helpline. The helpline is
+              free to call but the services or programs that you pursue may have
+              costs associated with them. Neither qualifyaca.com nor any of the
+              supplemental insurance plans to which you may be connected are
+              endorsed by the U.S. Government or the federal health
+              program.Terms and Conditions, and Privacy Policy. Not affiliated
+              with the U. S. government or federal Medicare program. A licensed
+              agent may contact you regarding this insurance-related
+              information.
             </small>
-            <small>
-              Enrollment in the plan depends on the plan’s contract renewal with
-              Medicare. Possible options include, but are not limited to Major
-              Medical Plans, Short Term Plans, Christian Health Plans, Health
-              Sharing Plans, discount cards and Fixed Indemnity Plans.
-            </small>
-            <small>
-              Descriptions are for informational purposes only and subject to
-              change. {footerTitle} is not affiliated with any insurance plan
-              nor does it represent or endorse any plan. We do not offer every
-              plan available in your area. Any information we provide is limited
-              to those plans we do offer in your area. Please contact
-              Medicare.gov or 1–800 MEDICARE to get information on all of your
-              options.
-            </small>
-            <small>
-              By using this site, you acknowledge that you have read and agree
-              to the{" "}
-              <a
-                target={"_blank"}
-                rel="noreferrer"
-                href={termsAndConditionsRoute}
-              >
-                Terms of Service
-              </a>
-              , and{" "}
-              <a target={"_blank"} rel="noreferrer" href={privacyPolicyRoute}>
-                Privacy Policy
-              </a>
-              . Not affiliated with the U. S. government or federal Medicare
-              program. A licensed agent may contact you regarding this
-              insurance-related information.
-            </small>
-            <ul className="menu">
-              <li>
+            <div class="footer-links color-dark-grey">
+              <div class="font-13">Copyright © 2022 | Health benefits</div>
+              <div class="footer-vertical-divider"></div>
+              <div class="font-13">
                 <a
-                  target={"_blank"}
-                  rel="noreferrer"
-                  href={privacyPolicyRoute}
-                  className="privacypolicy"
+                  target="_blank"
+                  href="https://quotes.health-benefits.co/privacy-policy"
                 >
-                  Privacy Policy /
+                  PRIVACY POLICY
                 </a>
-              </li>
-              <li>
+              </div>
+              <div class="footer-vertical-divider"></div>
+              <div class="font-13">
                 <a
-                  target={"_blank"}
-                  rel="noreferrer"
-                  href={termsAndConditionsRoute}
-                  className="privacypolicy"
+                  target="_blank"
+                  href="https://quotes.health-benefits.co/terms"
                 >
-                  Terms of Service /
+                  TERMS OF USE
                 </a>
-              </li>
-            </ul>
-            <small>© {fullName} 2023.</small>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
