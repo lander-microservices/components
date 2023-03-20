@@ -63,6 +63,7 @@ module.exports = {
       remotes: {},
       exposes: {
         "./Header1": "./src/components/Header1/index.jsx",
+        "./Testimonials1": "./src/components/Testimonials1/index.jsx",
         "./Footer1": "./src/components/Footer1/index.jsx",
       },
       shared: {

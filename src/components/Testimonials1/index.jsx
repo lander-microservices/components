@@ -2,7 +2,7 @@ import React from "react";
 import "./index.scss";
 import { Rating } from "./Ratings/Ratings";
 
-const index = () => {
+const Testimonials1 = () => {
   return (
     <div className="main">
       <div className="container">
@@ -14,4 +14,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Testimonials1;
