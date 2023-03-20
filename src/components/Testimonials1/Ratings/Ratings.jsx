@@ -72,7 +72,7 @@ export const Rating = () => {
   };
 
   return (
-    <div className="rating ">
+    <div className="rating col">
       <div className="rating-head ">
         <div className="rating-headline">What Our Customers Are Saying?</div>
 
