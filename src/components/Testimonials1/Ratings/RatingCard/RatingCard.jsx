@@ -3,17 +3,17 @@ import React from "react";
 
 export const RatingCard = ({ head, body, name }) => {
   return (
-    <div className="rating-card flex-a-cen-j-cen flex-d-col">
+    <div className="rating-card text-align-center">
       <img
         src="https://magenta-rugelach-af2962.netlify.app/assets/images/ratings/5star.svg"
         alt="5 star"
       />
 
-      <div className="font-24 bold color-primary rating-card1">{head}</div>
+      <div className="blue rating-headline">{head}</div>
 
-      <div className="font-16 color-dark-grey rating-card2">{body}</div>
+      <div className="gray rating-paragraph">{body}</div>
 
-      <div className="font-16 color-dark-grey rating-card3">{name}</div>
+      <div className="gray rating-paragraph">{name}</div>
     </div>
   );
 };
