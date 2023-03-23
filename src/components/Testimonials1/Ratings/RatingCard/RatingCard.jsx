@@ -5,7 +5,7 @@ export const RatingCard = ({ head, body, name }) => {
   return (
     <div className="rating-card bg-white text-align-center">
       <img
-        src="https://magenta-rugelach-af2962.netlify.app/assets/images/ratings/5star.svg"
+        src="https://image-storage-wecallmedia.netlify.app/assets/images/ratings/5star.svg"
         alt="5 star"
       />
 

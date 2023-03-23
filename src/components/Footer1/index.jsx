@@ -52,8 +52,8 @@ export default function Footer({
               </div>
               <div className="policylink">
                 <ul>
-                  <li className="font-13"><a classname="lightgray" target="_blank" href="https://quotes.health-benefits.co/privacy-policy">PRIVACY POLICY</a></li>
-                  <li className="font-13"><a classname="blue" target="_blank" href="https://quotes.health-benefits.co/terms">TERMS OF USE</a></li>
+                  <li className="font-13"><a className="lightgray" target="_blank" href="https://quotes.health-benefits.co/privacy-policy">PRIVACY POLICY</a></li>
+                  <li className="font-13"><a className="blue" target="_blank" href="https://quotes.health-benefits.co/terms">TERMS OF USE</a></li>
                 </ul>
               </div>
             </div>

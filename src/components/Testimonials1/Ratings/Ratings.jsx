@@ -101,7 +101,7 @@ export const Rating = () => {
         <div className="gray first">Excellent</div>
         <img
           className="second"
-          src="https://magenta-rugelach-af2962.netlify.app/assets/images/ratings/5star.svg"
+          src="https://image-storage-wecallmedia.netlify.app/assets/images/ratings/5star.svg"
           alt="5 stars"
         />
         <div className="gray third">
@@ -109,7 +109,7 @@ export const Rating = () => {
         </div>
         <div className="fourth">
           <img
-            src="https://magenta-rugelach-af2962.netlify.app/assets/images/ratings/trustpilot.svg"
+            src="https://image-storage-wecallmedia.netlify.app/assets/images/ratings/trustpilot.svg"
             alt="Trust Pilot"
           />
         </div>
