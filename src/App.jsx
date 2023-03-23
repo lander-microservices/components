@@ -7,10 +7,10 @@ import Testimonials1 from "./components/Testimonials1/index";
 import "./index.css";
 
 const App = () => (
-  <div className="container">
+  <div>
     <Header
       eventID={""}
-      number="(800) 888 99"
+      number="(800) 888-9999"
       headerTitle={"QualifyBenefits.co"}
     />
     <Testimonials1 />

@@ -9,7 +9,7 @@ export default function Header({ number, eventID, headerTitle }) {
     });
   return (
     <>
-      <div className="navbar">
+      <div className="navbar bg-white blue">
         <nav>
           <div className="logoholder">
             <div className="logo">
@@ -18,26 +18,26 @@ export default function Header({ number, eventID, headerTitle }) {
                 alt="logo"
               />
               <div className="sitename">
-                <h1>{headerTitle}</h1>
-                <h2>A non-government medicare site</h2>
+                <h1 className="blue">{headerTitle}</h1>
+                <h2 className="blue">A non-government medicare site</h2>
               </div>
             </div>
           </div>
           <a
             href={`tel:${number}`}
             onClick={handleCallEventClick}
-            className="callnow"
+            className="callnow blue"
             id="prelander_call"
           >
             <div className="phone-icon">
               <img src={PHONE_IMAGE} alt="logo" />
             </div>
             <div className="phone-number-holder">
-              <div className="text-phone-number">
+              <div className="text-phone-number gray">
                 CALL TOLL-FREE M-F 8AM-8PM EST
               </div>
               <div className="toll-free-number-holder">
-                <div className="available-blinker"></div>
+                <div className="available-blinker bg-lightgreen"></div>
                 <div className="toll-free-number">
                   <span id="font-end-contact-number" className="font-bold">
                     <span className="display-number">{number}</span>

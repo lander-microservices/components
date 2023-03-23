@@ -72,11 +72,11 @@ export const Rating = () => {
   };
 
   return (
-    <div className="rating col">
+    <div className="rating col text-align-center">
       <div className="rating-head ">
-        <div className="rating-headline">What Our Customers Are Saying?</div>
+        <div className="rating-headline blue">What Our Customers Are Saying?</div>
 
-        <div className="rating-paragraph">
+        <div className="rating-paragraph gray">
           Here's what some of our thousands of customers over the years have to
           say!
         </div>
@@ -97,17 +97,16 @@ export const Rating = () => {
           })}
         </Carousel>
       </div>
-      <div className="flex-a-cen-j-cen review-head">
-        <div className="font-24 bold color-dark-grey first">Excellent</div>
+      <div className="review-head">
+        <div className="gray first">Excellent</div>
         <img
           className="second"
           src="https://magenta-rugelach-af2962.netlify.app/assets/images/ratings/5star.svg"
           alt="5 stars"
         />
-        <div className="font-16 color-dark-grey third">
+        <div className="gray third">
           Based on 786 reviews
         </div>
-
         <div className="fourth">
           <img
             src="https://magenta-rugelach-af2962.netlify.app/assets/images/ratings/trustpilot.svg"
