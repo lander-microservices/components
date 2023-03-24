@@ -8,6 +8,7 @@
     --white : #FFFFFF;
     --black : #000000;
     --lightgray : #888888;
+    --pastelgray : #E7E7E7;
   }
   *, :after, :before {
     box-sizing: border-box;
@@ -74,6 +75,15 @@
   .bg-lightgray {
     background-color: var(--lightgray);
   }
+  .pastelgray {
+    color: var(--pastelgray);
+  }
+  .bg-pastelgray {
+    background-color: var(--pastelgray);
+  }
+  .mb-1 {
+    margin-bottom: 1rem;
+  }
   body {
     color: var(--blue);
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
@@ -105,17 +115,17 @@
     padding-left: calc(3rem * 0.5);
     margin-right: auto;
     margin-left: auto;
-  }
-  .container .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: calc(-0.5 * 1.5rem);
-    margin-left: calc(-0.5 * 1.5rem);
-  }
-  .container .row .col {
-    flex: 0 0 auto;
-    padding-right: calc(1.5rem * 0.5);
-    padding-left: calc(1.5rem * 0.5);
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: calc(-0.5 * 1.5rem);
+      margin-left: calc(-0.5 * 1.5rem);
+      .col {
+        flex: 0 0 auto;
+        padding-right: calc(1.5rem * 0.5);
+        padding-left: calc(1.5rem * 0.5);
+      }
+    }
   }
   
   @media (min-width: 517px) {

@@ -3,6 +3,12 @@
   line-height: 1.0625rem;
 }
 .footer {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  @media (min-width:768px) {
+    padding-top: 2rem;
+    margin-top: 2rem;
+  }
   .container {
     .row {
       max-width: 64rem;
