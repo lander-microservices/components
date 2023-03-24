@@ -4,14 +4,14 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const fs = require("fs");
 try {
   fs.mkdirSync("./dist");
-} catch (error) {}
+} catch (error) { }
 fs.copyFileSync("./src/_redirects", "./dist/_redirects");
 
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
     // publicPath: "http://localhost:8084/",
-    publicPath: "https://calm-monstera-d723a6.netlify.app/",
+    publicPath: "https://component-microservice.netlify.app",
   },
 
   resolve: {
@@ -63,8 +63,12 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
+        "./prelander/header/v1": "./src/components/PreLander/Headers/v1/index.jsx",
+        "./prelander/footer/v1": "./src/components/PreLander/Footers/v1/index.jsx",
         "./Header1": "./src/components/Header1/index.jsx",
+        "./Testimonials1": "./src/components/Testimonials1/index.jsx",
         "./Footer1": "./src/components/Footer1/index.jsx",
+        "./GlobalCss": "./src/styles/globalCss.scss"
       },
       shared: {
         ...deps,
