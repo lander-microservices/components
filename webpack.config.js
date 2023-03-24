@@ -10,8 +10,7 @@ fs.copyFileSync("./src/_redirects", "./dist/_redirects");
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    // publicPath: "http://localhost:8084/",
-    publicPath: "https://component-microservice.netlify.app",
+    publicPath: "https://component-microservice.netlify.app/",
   },
 
   resolve: {
