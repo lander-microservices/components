@@ -62,6 +62,8 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
+        "./prelander/header/v1": "./src/components/PreLander/Headers/v1/index.jsx",
+        "./prelander/footer/v1": "./src/components/PreLander/Footers/v1/index.jsx",
         "./Header1": "./src/components/Header1/index.jsx",
         "./Testimonials1": "./src/components/Testimonials1/index.jsx",
         "./Footer1": "./src/components/Footer1/index.jsx",
