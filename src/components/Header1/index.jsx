@@ -53,9 +53,9 @@ export default function Header({
                 </div>
                 <div className="toll-free-number-holder">
                   <div className="available-blinker bg-lightgreen"></div>
-                  <div className="toll-free-number">
+                  <div className={`toll-free-number ${prelander_nav_toll_free_color}`}>
                     <span id="font-end-contact-number" className="font-bold">
-                      <span className={`display-number ${prelander_nav_toll_free_color}`}>{number}</span>
+                      <span className={`display-number`}>{number}</span>
                     </span>
                     <span className="font-semibold">(TTY 711)</span>
                   </div>
