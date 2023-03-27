@@ -23,7 +23,7 @@ export default function Header({
   console.log("content block", content_block);
   return (
     <>
-      <div className={`navbar bg-white blue ${prelander_nav_bg_color}`}>
+      <div className={`navbar blue ${prelander_nav_bg_color && prelander_nav_bg_color.length ? prelander_nav_bg_color : 'bg-white'}`}>
         <nav>
           <div className="logoholder">
             <div className="logo">
