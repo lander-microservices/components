@@ -2,37 +2,39 @@ import React, { useEffect, useState } from "react";
 import "./index.scss";
 import { Rating } from "./Ratings/Ratings";
 
-const Testimonials1 = ({ content_block,  getContent }) => {
-
-  const [testimonials, setTestimonials] = useState([])
-
-  const fetchContent = async () =>{
-    const data = await getContent();
-    setTestimonials(data.stories);
-  }
-  useEffect(() => {
-    fetchContent();
-  }, []);
+const Testimonials1 = ({
+  content_block,
+  prelander_testimonial_paragraph,
+  prelander_testimonial_headline,
+}) => {
+  const { prelander_testimonial_list } = content_block;
 
   const filterOutData = (testimonials) => {
-    console.log("testimonials1", testimonials)
     const newData = testimonials.map((i) => {
       return {
-        head: i.content.testimonial_author_headline,
-        body: i.content.testimonial_author_paragraph,
-        name: i.content.testimonial_author_name,
+        head: i.testimonial_author_headline,
+        body: i.testimonial_author_paragraph,
+        name: i.testimonial_author_name,
       };
     });
-    console.log("testimonials2", testimonials)
-    return newData
+    return newData;
   };
 
+  console.log(content_block);
   return (
     <div className="main">
       <div className="container">
         <div className="row">
-          {testimonials.length > 0 ? (
-            <Rating rc={filterOutData(testimonials)} />
+          {prelander_testimonial_list &&
+          prelander_testimonial_list.length > 0 ? (
+            <Rating
+              prelander_testimonial_bg_color={
+                content_block.prelander_testimonial_bg_color
+              }
+              prelander_testimonial_paragraph={prelander_testimonial_paragraph}
+              prelander_testimonial_headline={prelander_testimonial_headline}
+              rc={filterOutData(prelander_testimonial_list)}
+            />
           ) : undefined}
         </div>
       </div>

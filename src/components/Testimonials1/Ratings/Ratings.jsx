@@ -7,7 +7,7 @@ import { Carousel } from "react-configurable-carousel";
 // const trustpilot = "/assets/images/ratings/trustpilot.svg";
 // const star5 = "/assets/images/ratings/5star.svg";
 
-export const Rating = ({ rc }) => {
+export const Rating = ({ rc, prelander_testimonial_headline, prelander_testimonial_paragraph, prelander_testimonial_bg_color }) => {
 
   const slicksettings = {
     arrows: false,
@@ -32,11 +32,9 @@ export const Rating = ({ rc }) => {
   return (
     <div className="rating col text-align-center">
       <div className="rating-head ">
-        <div className="rating-headline blue">What Our Customers Are Saying?</div>
+        <div className="rating-headline blue" dangerouslySetInnerHTML={{ __html: prelander_testimonial_headline }} ></div>
 
-        <div className="rating-paragraph gray">
-          Here's what some of our thousands of customers over the years have to
-          say!
+        <div dangerouslySetInnerHTML={{ __html: prelander_testimonial_paragraph }} className="rating-paragraph gray">
         </div>
       </div>
 
@@ -46,6 +44,7 @@ export const Rating = ({ rc }) => {
             return (
               <div key={i}>
                 <RatingCard
+                  prelander_testimonial_bg_color={prelander_testimonial_bg_color}
                   head={k["head"]}
                   body={k["body"]}
                   name={k["name"]}

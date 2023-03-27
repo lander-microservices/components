@@ -7,14 +7,21 @@ export default function Header({
   number,
   eventID,
   headerTitle,
+  content_block,
 }) {
   const handleCallEventClick = () =>
     window.fbcFunc("track", "Contact", {
       eventID: eventID,
     });
+
+  const {
+    prelander_nav_bg_color,
+    prelander_logo_text_color,
+    prelander_nav_toll_free_color,
+  } = content_block;
   return (
     <>
-      <div className="navbar bg-white blue">
+      <div className={`navbar bg-white blue ${prelander_nav_bg_color}`}>
         <nav>
           <div className="logoholder">
             <div className="logo">
@@ -23,12 +30,12 @@ export default function Header({
                 alt="logo"
               />
               <div className="sitename">
-                <h1 className="blue">{headerTitle}</h1>
+                <h1 className={`blue ${prelander_logo_text_color}`}>{headerTitle}</h1>
                 <h2 className="blue">A non-government medicare site</h2>
               </div>
             </div>
           </div>
-          {tollFreeVisible === 'true' ? (
+          {tollFreeVisible === "true" ? (
             <a
               href={`tel:${number}`}
               onClick={handleCallEventClick}

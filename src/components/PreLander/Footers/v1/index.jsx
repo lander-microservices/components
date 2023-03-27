@@ -1,10 +1,18 @@
 import React, { useEffect } from "react";
 import "./index.scss";
 
-const FooterMenuLink = ({ url, footer_nav_name }) => {
+const FooterMenuLink = ({
+  url,
+  footer_nav_name,
+  prelander_footer_menu_color,
+}) => {
   return (
     <li className="font-13">
-      <a className="lightgray" target="_blank" href={url}>
+      <a
+        className={`${prelander_footer_menu_color && prelander_footer_menu_color.length ? prelander_footer_menu_color : 'lightgray'}`}
+        target="_blank"
+        href={url}
+      >
         {footer_nav_name}
       </a>
     </li>
@@ -12,24 +20,32 @@ const FooterMenuLink = ({ url, footer_nav_name }) => {
 };
 
 export default function Footer({ dis, Disclaimer, eventID, content_block }) {
-  const { prelander_footer_copyright_url, prelander_footer_disclaimer, prelander_footer_menu } =
-    content_block;
+  const {
+    prelander_footer_copyright_url,
+    prelander_footer_bg_color,
+    prelander_footer_menu,
+    prelander_footer_disclaimer_color,
+    prelander_footer_menu_color,
+  } = content_block;
 
   const getFooterMenu = (component, obj) => {
     if (component === "footer_menu_link") {
       return (
         <FooterMenuLink
           url={obj.footer_nav.url}
+          prelander_footer_menu_color={prelander_footer_menu_color}
           footer_nav_name={obj.footer_nav_name}
         />
       );
     }
   };
-  // console.log("Content Block", disclaimer);
 
+  console.log("Footer Color", content_block);
   return (
     <>
-      <footer className="footer bg-white lightgray">
+      <footer
+        className={`footer lightgray ${prelander_footer_bg_color && prelander_footer_bg_color.length ? prelander_footer_bg_color : 'bg-white'}`}
+      >
         <div className="container">
           <div className="row">
             <div className="logoholder col">
@@ -45,8 +61,12 @@ export default function Footer({ dis, Disclaimer, eventID, content_block }) {
               </div>
               <hr className="horizontal" />
             </div>
-            <div className="discalimer col">
-            <small><div dangerouslySetInnerHTML={{ __html: dis }}></div></small>
+            <div
+              className={`discalimer col ${prelander_footer_disclaimer_color}`}
+            >
+              <small>
+                <div dangerouslySetInnerHTML={{ __html: dis }}></div>
+              </small>
             </div>
             <div className="footer-links color-dark-grey col">
               <div className="copyright">
