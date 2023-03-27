@@ -2,14 +2,28 @@ import React from "react";
 import PHONE_IMAGE from "./phone.svg";
 import "./index.scss";
 
-export default function Header({ number, eventID, headerTitle }) {
+export default function Header({
+  tollFreeVisible,
+  number,
+  eventID,
+  headerTitle,
+  content_block,
+}) {
   const handleCallEventClick = () =>
     window.fbcFunc("track", "Contact", {
       eventID: eventID,
     });
+
+  const {
+    prelander_nav_bg_color,
+    prelander_logo_text_color,
+    prelander_nav_toll_free_color,
+  } = content_block;
+
+  console.log("content block", content_block);
   return (
     <>
-      <div className="navbar bg-white blue">
+      <div className={`navbar blue ${prelander_nav_bg_color && prelander_nav_bg_color.length ? prelander_nav_bg_color : 'bg-white'}`}>
         <nav>
           <div className="logoholder">
             <div className="logo">
@@ -18,35 +32,37 @@ export default function Header({ number, eventID, headerTitle }) {
                 alt="logo"
               />
               <div className="sitename">
-                <h1 className="blue">{headerTitle}</h1>
+                <h1 className={`${prelander_logo_text_color && prelander_logo_text_color.length ? prelander_logo_text_color : 'blue'}`}>{headerTitle}</h1>
                 <h2 className="blue">A non-government medicare site</h2>
               </div>
             </div>
           </div>
-          <a
-            href={`tel:${number}`}
-            onClick={handleCallEventClick}
-            className="callnow blue"
-            id="prelander_call"
-          >
-            <div className="phone-icon">
-              <img src={PHONE_IMAGE} alt="logo" />
-            </div>
-            <div className="phone-number-holder">
-              <div className="text-phone-number gray">
-                CALL TOLL-FREE M-F 8AM-8PM EST
+          {tollFreeVisible === "true" ? (
+            <a
+              href={`tel:${number}`}
+              onClick={handleCallEventClick}
+              className="callnow blue"
+              id="prelander_call"
+            >
+              <div className="phone-icon">
+                <img src={PHONE_IMAGE} alt="logo" />
               </div>
-              <div className="toll-free-number-holder">
-                <div className="available-blinker bg-lightgreen"></div>
-                <div className="toll-free-number">
-                  <span id="font-end-contact-number" className="font-bold">
-                    <span className="display-number">{number}</span>
-                  </span>
-                  <span className="font-semibold">(TTY 711)</span>
+              <div className="phone-number-holder">
+                <div className="text-phone-number gray">
+                  CALL TOLL-FREE M-F 8AM-8PM EST
+                </div>
+                <div className="toll-free-number-holder">
+                  <div className="available-blinker bg-lightgreen"></div>
+                  <div className="toll-free-number">
+                    <span id="font-end-contact-number" className="font-bold">
+                      <span className={`display-number ${prelander_nav_toll_free_color}`}>{number}</span>
+                    </span>
+                    <span className="font-semibold">(TTY 711)</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          ) : undefined}
         </nav>
       </div>
     </>
