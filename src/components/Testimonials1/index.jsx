@@ -19,17 +19,21 @@ const Testimonials1 = ({
     });
     return newData;
   };
-
-  console.log(content_block);
   return (
-    <div className="main">
+    <div className={`main  ${content_block.prelander_testimonial_bg_color}`}>
       <div className="container">
-        <div className="row">
+        <div className={`row`}>
           {prelander_testimonial_list &&
           prelander_testimonial_list.length > 0 ? (
             <Rating
               prelander_testimonial_bg_color={
                 content_block.prelander_testimonial_bg_color
+              }
+              prelander_testimonial_headline_color={
+                content_block.prelander_testimonial_headline_color
+              }
+              prelander_testimonial_paragraph_color={
+                content_block.prelander_testimonial_paragraph_color
               }
               prelander_testimonial_paragraph={prelander_testimonial_paragraph}
               prelander_testimonial_headline={prelander_testimonial_headline}

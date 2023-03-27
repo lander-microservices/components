@@ -1,9 +1,9 @@
 import React from "react";
 // const star5 = "/assets/images/ratings/5star.svg";
 
-export const RatingCard = ({ head, body, name, prelander_testimonial_bg_color }) => {
+export const RatingCard = ({ head, body, name }) => {
   return (
-    <div className={`rating-card bg-white text-align-center ${prelander_testimonial_bg_color}`}>
+    <div className={`rating-card bg-white text-align-center`}>
       <img
         src="https://image-storage-wecallmedia.netlify.app/assets/images/ratings/5star.svg"
         alt="5 star"

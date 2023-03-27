@@ -19,6 +19,8 @@ export default function Header({
     prelander_logo_text_color,
     prelander_nav_toll_free_color,
   } = content_block;
+
+  console.log("content block", content_block);
   return (
     <>
       <div className={`navbar bg-white blue ${prelander_nav_bg_color}`}>
@@ -30,7 +32,7 @@ export default function Header({
                 alt="logo"
               />
               <div className="sitename">
-                <h1 className={`blue ${prelander_logo_text_color}`}>{headerTitle}</h1>
+                <h1 className={`${prelander_logo_text_color && prelander_logo_text_color.length ? prelander_logo_text_color : 'blue'}`}>{headerTitle}</h1>
                 <h2 className="blue">A non-government medicare site</h2>
               </div>
             </div>
@@ -53,7 +55,7 @@ export default function Header({
                   <div className="available-blinker bg-lightgreen"></div>
                   <div className="toll-free-number">
                     <span id="font-end-contact-number" className="font-bold">
-                      <span className="display-number">{number}</span>
+                      <span className={`display-number ${prelander_nav_toll_free_color}`}>{number}</span>
                     </span>
                     <span className="font-semibold">(TTY 711)</span>
                   </div>
