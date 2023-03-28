@@ -5,11 +5,16 @@ const FooterMenuLink = ({
   url,
   footer_nav_name,
   prelander_footer_menu_color,
+  index
 }) => {
   return (
     <li className="font-13">
       <a
-        className={`${prelander_footer_menu_color && prelander_footer_menu_color.length ? prelander_footer_menu_color : 'lightgray'}`}
+        className={`${
+          prelander_footer_menu_color && prelander_footer_menu_color.length
+            ? prelander_footer_menu_color
+            : "lightgray"
+        }`}
         target="_blank"
         href={url}
       >
@@ -19,7 +24,14 @@ const FooterMenuLink = ({
   );
 };
 
-export default function Footer({ dis, Disclaimer, eventID, content_block }) {
+export default function Footer({
+  dis,
+  Disclaimer,
+  eventID,
+  content_block,
+  prelander_logo_text_color,
+  prelander_logo_text,
+}) {
   const {
     prelander_footer_copyright_url,
     prelander_footer_bg_color,
@@ -28,10 +40,11 @@ export default function Footer({ dis, Disclaimer, eventID, content_block }) {
     prelander_footer_menu_color,
   } = content_block;
 
-  const getFooterMenu = (component, obj) => {
+  const getFooterMenu = (component, obj, index) => {
     if (component === "footer_menu_link") {
       return (
         <FooterMenuLink
+          key={obj.footer_nav_name + index}
           url={obj.footer_nav.url}
           prelander_footer_menu_color={prelander_footer_menu_color}
           footer_nav_name={obj.footer_nav_name}
@@ -39,12 +52,14 @@ export default function Footer({ dis, Disclaimer, eventID, content_block }) {
       );
     }
   };
-
-  console.log("Footer Color", content_block);
   return (
     <>
       <footer
-        className={`footer lightgray ${prelander_footer_bg_color && prelander_footer_bg_color.length ? prelander_footer_bg_color : 'bg-white'}`}
+        className={`footer lightgray ${
+          prelander_footer_bg_color && prelander_footer_bg_color.length
+            ? prelander_footer_bg_color
+            : "bg-white"
+        }`}
       >
         <div className="container">
           <div className="row">
@@ -55,7 +70,16 @@ export default function Footer({ dis, Disclaimer, eventID, content_block }) {
                   alt="logo"
                 />
                 <div className="sitename">
-                  <h1 className="blue">Health-benefits.co</h1>
+                  <h1
+                    className={`${
+                      prelander_logo_text_color &&
+                      prelander_logo_text_color.length
+                        ? prelander_logo_text_color
+                        : "blue"
+                    }`}
+                  >
+                    {prelander_logo_text}
+                  </h1>
                   <h2 className="blue">a non-government aca site</h2>
                 </div>
               </div>
@@ -76,8 +100,8 @@ export default function Footer({ dis, Disclaimer, eventID, content_block }) {
               </div>
               <div className="policylink">
                 <ul>
-                  {(prelander_footer_menu || []).map((i) =>
-                    getFooterMenu(i.component, i)
+                  {(prelander_footer_menu || []).map((i, index) =>
+                    getFooterMenu(i.component, i, index)
                   )}
                 </ul>
               </div>

@@ -40,7 +40,6 @@ export default function Footer({ dis, Disclaimer, eventID, content_block }) {
     }
   };
 
-  console.log("Footer Color", content_block);
   return (
     <>
       <footer

@@ -20,7 +20,6 @@ export default function Header({
     prelander_nav_toll_free_color,
   } = content_block;
 
-  console.log("content block", content_block);
   return (
     <>
       <div className={`navbar blue ${prelander_nav_bg_color && prelander_nav_bg_color.length ? prelander_nav_bg_color : 'bg-white'}`}>
