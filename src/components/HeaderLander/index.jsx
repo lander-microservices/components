@@ -15,14 +15,15 @@ export default function Header({
     });
 
   const {
-    prelander_nav_bg_color,
-    prelander_logo_text_color,
-    prelander_nav_toll_free_color,
+    lander_nav_bg_color,
+    lander_logo_text_color,
+    lander_nav_toll_free_color,
   } = content_block;
 
+  console.log("Header Lander", content_block)
   return (
     <>
-      <div className={`navbar blue ${prelander_nav_bg_color && prelander_nav_bg_color.length ? prelander_nav_bg_color : 'bg-white'}`}>
+      <div className={`navbar blue ${lander_nav_bg_color && lander_nav_bg_color.length ? lander_nav_bg_color : 'bg-white'}`}>
         <nav>
           <div className="logoholder">
             <div className="logo">
@@ -31,8 +32,8 @@ export default function Header({
                 alt="logo"
               />
               <div className="sitename">
-                <h1 className={`${prelander_logo_text_color && prelander_logo_text_color.length ? prelander_logo_text_color : 'blue'}`}>{headerTitle}</h1>
-                <h2 className="blue">A non-government medicare site</h2>
+                <h1 className={`${lander_logo_text_color && lander_logo_text_color.length ? lander_logo_text_color : 'blue'}`}>{headerTitle}</h1>
+                <h2 className={`${lander_logo_text_color && lander_logo_text_color.length ? lander_logo_text_color : 'blue'}`}>{content_block.lander_logo_subheadline}</h2>
               </div>
             </div>
           </div>
@@ -41,7 +42,7 @@ export default function Header({
               href={`tel:${number}`}
               onClick={handleCallEventClick}
               className="callnow blue"
-              id="prelander_call"
+              id="lander_call"
             >
               <div className="phone-icon">
                 <img src={PHONE_IMAGE} alt="logo" />
@@ -52,7 +53,7 @@ export default function Header({
                 </div>
                 <div className="toll-free-number-holder">
                   <div className="available-blinker bg-lightgreen"></div>
-                  <div className={`toll-free-number ${prelander_nav_toll_free_color}`}>
+                  <div className={`toll-free-number ${lander_nav_toll_free_color}`}>
                     <span id="font-end-contact-number" className="font-bold">
                       <span className={`display-number`}>{number}</span>
                     </span>
