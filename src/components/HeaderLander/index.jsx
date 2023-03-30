@@ -19,8 +19,6 @@ export default function Header({
     lander_logo_text_color,
     lander_nav_toll_free_color,
   } = content_block;
-
-  console.log("Header Lander", content_block)
   return (
     <>
       <div className={`navbar blue ${lander_nav_bg_color && lander_nav_bg_color.length ? lander_nav_bg_color : 'bg-white'}`}>
