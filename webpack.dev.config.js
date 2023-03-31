@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const fs = require("fs");
 try {
   fs.mkdirSync("./dist");
-} catch (error) {}
+} catch (error) { }
 fs.copyFileSync("./src/_redirects", "./dist/_redirects");
 
 const deps = require("./package.json").dependencies;
@@ -68,7 +68,9 @@ module.exports = {
         "./HeaderLander": "./src/components/HeaderLander/index.jsx",
         "./FooterLander": "./src/components/FooterLander/index.jsx",
         "./Advertorial": "./src/components/Advertorial/index.jsx",
-        "./GlobalCss": "./src/styles/globalCss.scss"
+        "./GlobalCss": "./src/styles/globalCss.scss",
+        "./useRingba": "./src/hooks/useRingba.js",
+        "./shortCodeReplacer": "./src/features/shortCodeReplacer.js"
       },
       shared: {
         ...deps,

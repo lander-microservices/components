@@ -68,7 +68,9 @@ module.exports = {
         "./HeaderLander": "./src/components/HeaderLander/index.jsx",
         "./FooterLander": "./src/components/FooterLander/index.jsx",
         "./Advertorial": "./src/components/Advertorial/index.jsx",
-        "./GlobalCss": "./src/styles/globalCss.scss"
+        "./GlobalCss": "./src/styles/globalCss.scss",
+        "./useRingba": "./src/hooks/useRingba.js",
+        "./shortCodeReplacer": "./src/features/shortCodeReplacer.js"
       },
       shared: {
         ...deps,
