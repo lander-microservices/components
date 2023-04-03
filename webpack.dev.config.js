@@ -70,6 +70,14 @@ module.exports = {
         "./Advertorial": "./src/components/Advertorial/index.jsx",
         "./GlobalCss": "./src/styles/globalCss.scss",
         "./useRingba": "./src/hooks/useRingba.js",
+        "./useEventId": "./src/hooks/useEventID.js",
+        "./useGeneratorQuery": "./src/hooks/useGeneratorQuery.js",
+        "./useVisitorId": "./src/hooks/useVisitorId.js",
+        "./ringbaStorageKeys": "./src/config/ringbaStorageKeys.js",
+        "./storageKeys": "./src/config/sessionStorageKeys.js",
+        "./queryStrings": "./src/config/queryStrings.js",
+        "./landerToQuizCookie": "./src/config/landerToQuizCookie.js",
+        "./apis": "./src/config/apis.js",
         "./shortCodeReplacer": "./src/features/shortCodeReplacer.js"
       },
       shared: {
