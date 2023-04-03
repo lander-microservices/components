@@ -3,3 +3,4 @@ export const PABBLY = "";
 export const SLACK = "";
 
 export const APIS = { GET_IP_ADDRESS, PABBLY, SLACK };
+export default APIS;

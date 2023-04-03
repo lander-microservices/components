@@ -4,7 +4,7 @@ export const RINGBA_STORAGE_KEYS = {
     userIp: "userIp",
     userAgent: "userAgent",
 
-    generator: GENERATOR,
+    // generator: GENERATOR,
     click_id: CLICK_ID,
     utm_source: UTM_SOURCE,
     utm_medium: UTM_MEDIUM,
@@ -30,4 +30,5 @@ export const RINGBA_STORAGE_KEYS = {
     state: "state",
     city: "city",
     zip: "zip",
+    vl_click_id: 'vl_click_id'
 }

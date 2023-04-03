@@ -58,7 +58,7 @@ export function useRingba() {
 
         let rgbaPattern = { [key]: value || "" };
         if (key === "generator")
-            rgbaPattern = { [key]: value || RINGBA_COM_TAGS[0].user };
+            rgbaPattern = { [key]: value || "internal" };
         if (Array.isArray(window._rgba_tags)) {
             storeInSessionStorage(rgbaPattern);
             window._rgba_tags.push(rgbaPattern);
