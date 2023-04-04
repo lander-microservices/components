@@ -9,9 +9,6 @@ export default function Header({
   headerTitle,
   content_block,
 }) {
-// const handlePixelEventTrigger = () =>{
-//   console.log("Event Triggered:")
-// }
   const {
     lander_nav_bg_color,
     lander_logo_text_color,

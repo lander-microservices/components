@@ -128,15 +128,15 @@ function AddEventId({ eventID, fbcFunc, tikTokEvent}) {
   useEffect(() => {
     const interval = setInterval(() => {
       if (window.fbcFunc && !sessionStorage.getItem(viewContentKey)) {
-        fbcFunc("track", "PageView", { eventID: eventID });
+        window.fbcFunc("track", "PageView", { eventID: eventID });
         sessionStorage.setItem(viewContentKey, "true");
       }
 
-      if (
+      if ( window.tikTokEvent &&
         params.get("utm_source") === "tiktok" &&
         !sessionStorage.getItem(viewContentKey2)
       ) {
-        tikTokEvent.track("ViewContent", {}, { eventID: eventID });
+        window.tikTokEvent.track("ViewContent", {}, { eventID: eventID });
         sessionStorage.setItem(viewContentKey2, "true");
       }
     }, 1000);

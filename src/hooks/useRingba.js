@@ -76,11 +76,6 @@ export function useInitRingba({ ringbaKey }) {
     const [num, setNum] = useState();
     const [clickId, setClickId] = useState();
 
-    try {
-    } catch (error) {
-        console.log(error);
-    }
-
     useEffect(() => {
         setClickId(Cookies.get(CLICK_ID));
     }, [Cookies.get(CLICK_ID)]);
