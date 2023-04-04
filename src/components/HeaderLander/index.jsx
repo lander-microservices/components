@@ -5,15 +5,13 @@ import "./index.scss";
 export default function Header({
   tollFreeVisible,
   number,
-  eventID,
+  handlePixelEventTrigger,
   headerTitle,
   content_block,
 }) {
-  const handleCallEventClick = () =>
-    window.fbcFunc("track", "Contact", {
-      eventID: eventID,
-    });
-
+// const handlePixelEventTrigger = () =>{
+//   console.log("Event Triggered:")
+// }
   const {
     lander_nav_bg_color,
     lander_logo_text_color,
@@ -38,8 +36,8 @@ export default function Header({
           {tollFreeVisible === "true" ? (
             <a
               href={`tel:${number}`}
-              onClick={handleCallEventClick}
               className="callnow blue"
+              onClick={()=> handlePixelEventTrigger('Contact')}
               id="lander_call"
             >
               <div className="phone-icon">

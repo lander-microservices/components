@@ -5,14 +5,10 @@ import "./index.scss";
 export default function Header({
   tollFreeVisible,
   number,
-  eventID,
   headerTitle,
   content_block,
+  handlePixelEventTrigger
 }) {
-  const handleCallEventClick = () =>
-    window.fbcFunc("track", "Contact", {
-      eventID: eventID,
-    });
 
   const {
     prelander_nav_bg_color,
@@ -39,7 +35,7 @@ export default function Header({
           {tollFreeVisible === "true" ? (
             <a
               href={`tel:${number}`}
-              onClick={handleCallEventClick}
+              onClick={()=> handlePixelEventTrigger("Contact")}
               className="callnow blue"
               id="prelander_call"
             >

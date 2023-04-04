@@ -5,7 +5,7 @@ const FooterMenuLink = ({
   url,
   footer_nav_name,
   prelander_footer_menu_color,
-  index
+  index,
 }) => {
   return (
     <li className="font-13">
@@ -26,11 +26,12 @@ const FooterMenuLink = ({
 
 export default function Footer({
   dis,
-  Disclaimer,
   eventID,
   content_block,
   prelander_logo_text_color,
   prelander_logo_text,
+  fbcFunc,
+  tikTokEvent,
 }) {
   const {
     prelander_footer_copyright_url,
@@ -109,20 +110,35 @@ export default function Footer({
           </div>
         </div>
       </footer>
-      <AddEventId eventID={eventID} />
+      <AddEventId
+        eventID={eventID}
+        fbcFunc={fbcFunc}
+        tikTokEvent={tikTokEvent}
+      />
     </>
   );
 }
 
-function AddEventId({ eventID }) {
+function AddEventId({ eventID, fbcFunc, tikTokEvent }) {
   const viewContentKey = "PageView";
+  const viewContentKey2 = "PageView2";
+
+  const queryString = window.location.search;
+  const params = new URLSearchParams(queryString);
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (window.fbcFunc && !sessionStorage.getItem(viewContentKey)) {
-        window.fbcFunc &&
-          window.fbcFunc("track", "PageView", { eventID: eventID });
+        fbcFunc("track", "PageView", { eventID: eventID });
         sessionStorage.setItem(viewContentKey, "true");
+      }
+
+      if (
+        params.get("utm_source") === "tiktok" &&
+        !sessionStorage.getItem(viewContentKey2)
+      ) {
+        tikTokEvent.track("ViewContent", {}, { eventID: eventID });
+        sessionStorage.setItem(viewContentKey2, "true");
       }
     }, 1000);
 
