@@ -21,7 +21,6 @@ export function useVisitorId() {
     useEffect(() => {
         checkOrCreateVisitorId()
     }, [])
-    console.log('visitoid', visitorId)
     return { visitorId }
 }
 
