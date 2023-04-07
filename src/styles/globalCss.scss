@@ -127,7 +127,33 @@ a {
     }
   }
 }
-
+.btn-small {
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+  @media (min-width: 992px) {
+    width: 25%;
+  }
+}
+.btn-medium {
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+  @media (min-width: 992px) {
+    width: 33%;
+  }
+}
+.btn-large {
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+}
+.btn-extra-large {
+  width: 100%;
+}
 @media (min-width: 517px) {
   .container {
     max-width: 500px;
