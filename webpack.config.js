@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 
 const fs = require("fs");
 try {
@@ -88,6 +89,7 @@ module.exports = {
         },
       },
     }),
+    new CompressionPlugin(),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
     }),
