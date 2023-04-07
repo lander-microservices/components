@@ -1,6 +1,6 @@
-import React, { useState , useEffect} from "react";
-import { localStorageKeys} from "../config/sessionStorageKeys";
-import { v4 as uuid } from "uuid"
+import React, { useState, useEffect } from "react";
+import { localStorageKeys } from "../config/sessionStorageKeys";
+import { v4 } from "uuid"
 
 export function useVisitorId() {
     const [visitorId, setVisitorId] = useState("");
@@ -12,7 +12,7 @@ export function useVisitorId() {
         if (localStorageVisitorId) {
             setVisitorId(localStorageVisitorId)
         } else {
-            const newVisitorId = uuid();
+            const newVisitorId =  'VISITOR_ID' + v4().toUpperCase() + '.' + v4().toUpperCase()
             localStorage.setItem(localStorageKeys.visitorId, newVisitorId);
             setVisitorId(newVisitorId)
         }
@@ -21,7 +21,6 @@ export function useVisitorId() {
     useEffect(() => {
         checkOrCreateVisitorId()
     }, [])
-
     return { visitorId }
 }
 

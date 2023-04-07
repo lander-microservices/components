@@ -2,7 +2,7 @@ import { CLICK_ID, GENERATOR, PLACEMENT,FBCLID, SITE_ID, UTM_AD, UTM_CAMPAIGN, L
 
 export const RINGBA_STORAGE_KEYS = {
     userIp: "userIp",
-    userAgent: "userAgent",
+    userAgent: "userAgent", //
 
     // generator: GENERATOR,
     click_id: CLICK_ID,
@@ -23,9 +23,9 @@ export const RINGBA_STORAGE_KEYS = {
     fbc: "fbc",
     fbp: "fbp",
     visitor_id: "visitor_id",
-    event_id: "event_id",
+    event_id: "event_id", //
     domainName: "domainName",
-    user_agent: "user_agent",
+    user_agent: "user_agent", //
     fbPixelId: "fbPixelId",
     state: "state",
     city: "city",

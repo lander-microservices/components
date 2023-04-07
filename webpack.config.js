@@ -63,10 +63,6 @@ module.exports = {
       remotes: {},
       exposes: {
         "./Testimonials1": "./src/components/Testimonials1/index.jsx",
-        "./HeaderPreLander": "./src/components/HeaderPreLander/index.jsx",
-        "./FooterPreLander": "./src/components/FooterPreLander/index.jsx",
-        "./HeaderLander": "./src/components/HeaderLander/index.jsx",
-        "./FooterLander": "./src/components/FooterLander/index.jsx",
         "./Advertorial": "./src/components/Advertorial/index.jsx",
         "./GlobalCss": "./src/styles/globalCss.scss",
         "./useRingba": "./src/hooks/useRingba.js",

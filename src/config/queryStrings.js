@@ -3,10 +3,6 @@ import { RINGBA_STORAGE_KEYS } from "./ringbaStorageKeys"
 
 export const QUERY_STRINGS = [
     {
-        redirectString: GENERATOR,
-        ringbaKey: RINGBA_STORAGE_KEYS.generator
-    },
-    {
         redirectString: CLICK_ID,
         ringbaKey: RINGBA_STORAGE_KEYS.click_id
     },
