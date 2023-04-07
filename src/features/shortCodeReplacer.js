@@ -1,5 +1,5 @@
 const SHORT_CODES = [
-    { code: "ringbaNumber", replacement: ({ number, city, state }) => `<a href="tel:${number}" class=""><b>${number}</b></a>` },
+    { code: "ringbaNumber", replacement: ({ number, city, state }) => `<a href="tel:${number}" class="paragraph-btn"><b>${number}</b></a>` },
     { code: "city", replacement: ({ number, city, state }) => `<span class="">${city}</span>` },
     { code: "state", replacement: ({ number, city, state }) => `<span class="">${state}</span>` },
 ];
