@@ -63,8 +63,6 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
-        "./Testimonials1": "./src/components/Testimonials1/index.jsx",
-        "./Advertorial": "./src/components/Advertorial/index.jsx",
         "./GlobalCss": "./src/styles/globalCss.scss",
         "./useRingba": "./src/hooks/useRingba.js",
         "./useEventId": "./src/hooks/useEventID.js",
