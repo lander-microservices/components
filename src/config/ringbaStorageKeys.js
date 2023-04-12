@@ -23,7 +23,7 @@ export const RINGBA_STORAGE_KEYS = {
     fbc: "fbc",
     fbp: "fbp",
     visitor_id: "visitor_id",
-    event_id: "event_id", //
+    event_id: "eventID", //
     domainName: "domainName",
     user_agent: "user_agent", //
     fbPixelId: "fbPixelId",
